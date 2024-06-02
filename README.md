@@ -41,3 +41,6 @@ npm run dev
 - To delete a note, click on the "Delete" button next to the note you want to remove.
 
 - Pagination allows you to navigate between pages to view all your notes.
+
+# Hosted Application
+The application is hosted at [note-app-yordan-zafirov.netlify.app](https://note-app-yordan-zafirov.netlify.app/)
