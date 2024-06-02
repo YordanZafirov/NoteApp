@@ -1,3 +1,4 @@
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { INote } from "./Note.static";
 import {
   NoteButton,
@@ -15,17 +16,32 @@ const Note: React.FC<INote> = ({
   editHandler,
   deleteHandler,
 }) => {
+  const location = useLocation();
+  const isDetailView = location.pathname === `/note/${id}`;
+  const navigate = useNavigate();
   return (
     <NoteContainer>
       <NoteContent>
         <NoteTitle>{title}</NoteTitle>
         <NoteText>{text}</NoteText>
       </NoteContent>
-      <NoteFooter className="note-footer">
+      <NoteFooter>
+        {!isDetailView && (
+          <Link to={`/note/${id}`}>
+            <NoteButton>View</NoteButton>
+          </Link>
+        )}
         <NoteButton onClick={() => editHandler(id, text, title)}>
           Edit
         </NoteButton>
-        <NoteButton onClick={() => deleteHandler(id)}>Delete</NoteButton>
+        <NoteButton
+          onClick={() => {
+            deleteHandler(id);
+            navigate("/");
+          }}
+        >
+          Delete
+        </NoteButton>
       </NoteFooter>
     </NoteContainer>
   );
