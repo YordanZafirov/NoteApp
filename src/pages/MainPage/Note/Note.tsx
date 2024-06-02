@@ -22,7 +22,7 @@ const Note: React.FC<INote> = ({
         <NoteText>{text}</NoteText>
       </NoteContent>
       <NoteFooter className="note-footer">
-        <NoteButton onClick={() => editHandler(id, title, text)}>
+        <NoteButton onClick={() => editHandler(id, text, title)}>
           Edit
         </NoteButton>
         <NoteButton onClick={() => deleteHandler(id)}>Delete</NoteButton>

@@ -1,5 +1,13 @@
 import { ICreateNote } from "./CreateNote.static";
-import { StyledNote } from "./CreateNote.style";
+import {
+  CharacterLimit,
+  CreateNoteButton,
+  CreateNoteFooter,
+  CreateNoteTextArea,
+  CreateNoteTitleInput,
+  NoteForm,
+  StyledNote,
+} from "./CreateNote.style";
 
 const CreateNote: React.FC<ICreateNote> = ({
   inputText,
@@ -12,14 +20,14 @@ const CreateNote: React.FC<ICreateNote> = ({
 }) => {
   return (
     <StyledNote>
-      <form onSubmit={saveNote}>
-        <input
+      <NoteForm onSubmit={saveNote}>
+        <CreateNoteTitleInput
           type="text"
           placeholder="Title"
           value={title}
           onChange={(e) => setTitle(e.target.value)}
         />
-        <textarea
+        <CreateNoteTextArea
           cols={12}
           rows={6}
           placeholder="Take a note..."
@@ -27,11 +35,13 @@ const CreateNote: React.FC<ICreateNote> = ({
           onChange={(e) => setInputText(e.target.value)}
           maxLength={150}
         />
-        <div className="note-footer">
-          <small>Character limit: {characterLimit}</small>
-          <button type="submit">{editToggle ? "Update" : "Save"}</button>
-        </div>
-      </form>
+        <CreateNoteFooter>
+          <CharacterLimit>Character limit: {characterLimit}</CharacterLimit>
+          <CreateNoteButton type="submit">
+            {editToggle ? "Update" : "Save"}
+          </CreateNoteButton>
+        </CreateNoteFooter>
+      </NoteForm>
     </StyledNote>
   );
 };

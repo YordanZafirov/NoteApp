@@ -3,7 +3,7 @@ import { PageHeader } from "./Header.style";
 const Header = () => {
     return ( 
         <PageHeader className="header">
-            <h1>Your Notes</h1>
+            <h1>Note App</h1>
         </PageHeader>
      );
 }

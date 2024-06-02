@@ -1,38 +1,77 @@
 import styled from "styled-components";
 
 export const StyledNote = styled.div`
-  form {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    padding: 2rem;
-    border: 1px solid #e0e0e0;
-    border-radius: 10px;
-    max-width: 1200px;
+  background-color: #d4edda;
+  border-left: 10px solid #28a745;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin: 20px 0;
+  padding: 20px;
+  width: 300px;
+
+  @media (max-width: 768px) {
     width: 90%;
-    margin: 1rem auto;
-    background-color: #fff;
+  }
+`;
 
-    input,
-    textarea {
-      padding: 0.5rem;
-      border: 1px solid #e0e0e0;
-      border-radius: 5px;
-    }
+export const NoteForm = styled.form`
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+`;
 
-    input {
-      font-size: 1.5rem;
-    }
+export const CreateNoteTitleInput = styled.input`
+  font-size: 1.5em;
+  padding: 5px;
+  border: none;
+  border-bottom: 2px solid #28a745;
+  outline: none;
+  border-radius: 4px;
 
-    textarea {
-      resize: none;
-      font-size: 1rem;
-    }
+  &:focus {
+    border-color: #218838;
+  }
+`;
+
+export const CreateNoteTextArea = styled.textarea`
+  font-size: 1em;
+  padding: 10px;
+  border: 1px solid #28a745;
+  border-radius: 4px;
+  outline: none;
+  resize: none;
+
+  &:focus {
+    border-color: #218838;
+  }
+`;
+
+export const CreateNoteFooter = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+`;
+
+export const CreateNoteButton = styled.button`
+  background-color: #28a745;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: #218838;
   }
 
-  .note-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  &:focus {
+    outline: none;
   }
+`;
+
+
+export const CharacterLimit = styled.small`
+  color: #6c757d;
 `;

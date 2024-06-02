@@ -54,6 +54,8 @@ const useNotes = () => {
     });
   };
 
+  const sortedNotes = [...notes].reverse();
+
   useEffect(() => {
     const notesData = JSON.parse(localStorage.getItem("notes") || "");
     if (notesData) {
@@ -69,7 +71,7 @@ const useNotes = () => {
     inputText,
     title,
     characterLimit,
-    notes,
+    sortedNotes,
     editToggle,
     setInputText,
     setTitle,

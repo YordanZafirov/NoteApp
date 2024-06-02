@@ -7,7 +7,13 @@ export const NoteContainer = styled.div`
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   margin: 20px 0;
   padding: 20px;
+  padding-bottom: 60px;
   width: 300px;
+  position: relative;
+
+  @media (max-width: 768px) {
+    width: 90%;
+  }
 `;
 
 export const NoteContent = styled.div`
@@ -35,8 +41,10 @@ export const NoteFooter = styled.div`
   display: flex;
   justify-content: flex-end;
   gap: 1rem;
-  margin-top: 20px;
   width: 100%;
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
 `;
 
 export const NoteButton = styled.button`
