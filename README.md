@@ -34,6 +34,8 @@ npm run dev
 # Usage
 - To create a new note, click inside the green note-looking box. You can then type the title in the input field at the top or the content in the textarea below. Once you've entered your note, click the "Save" button to save it.
 
+- To view a specific note, click on the "View" button to view the information about the note you want to see.
+
 - To edit a note, click on the "Edit" button next to the note you want to modify.
 
 - To delete a note, click on the "Delete" button next to the note you want to remove.
