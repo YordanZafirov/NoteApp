@@ -1,7 +1,7 @@
 # Note Application
 
 ## Overview
-This is a note-taking application where users can create, read, update, and delete their notes. The application utilizes localStorage to persist notes, ensuring that user data remains intact even after reloading the page. It also features pagination, allowing users to navigate through their notes more efficiently. Individual notes can be viewed, edited, or deleted using React Router.
+This is a note-taking application where users can create, read, update, and delete their notes. The application utilizes localStorage to persist notes, ensuring that user data remains intact even after reloading the page. It also features pagination, allowing users to navigate through their notes more efficiently. Individual notes can be viewed, edited, or deleted using React Router. There is a 404 Not Found page that is displayed if a user tries to navigate to a link that is not supported in the application.
 
 ## Technologies used
 - React
