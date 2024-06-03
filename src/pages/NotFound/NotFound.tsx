@@ -3,7 +3,7 @@ import {
   NotFoundMessage,
   NotFoundPage,
   NotFoundTitle,
-} from "./NotFound";
+} from "./NotFound.style.";
 
 const NotFound = () => {
   return (
