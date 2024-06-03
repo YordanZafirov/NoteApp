@@ -75,3 +75,8 @@ export const CreateNoteButton = styled.button`
 export const CharacterLimit = styled.small`
   color: #6c757d;
 `;
+
+export const TitleCharacterLimit = styled.small`
+  color: #6c757d;
+  align-self: flex-end;
+`;

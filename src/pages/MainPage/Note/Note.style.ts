@@ -28,12 +28,12 @@ export const NoteTitle = styled.h1`
   padding: 3px 0;
   text-transform: capitalize;
   border-bottom: 1px solid #ffc107;
+  overflow-wrap: break-word;
 `;
 
 export const NoteText = styled.p`
   font-size: 1em;
   margin: 10px 0 0;
-  white-space: pre-wrap;
   overflow-wrap: break-word;
 `;
 

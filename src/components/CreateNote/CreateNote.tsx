@@ -1,6 +1,7 @@
 import { ICreateNote } from "./CreateNote.static";
 import {
   CharacterLimit,
+  TitleCharacterLimit,
   CreateNoteButton,
   CreateNoteFooter,
   CreateNoteTextArea,
@@ -24,9 +25,13 @@ const CreateNote: React.FC<ICreateNote> = ({
         <CreateNoteTitleInput
           type="text"
           placeholder="Title"
+          maxLength={30}
           value={title}
           onChange={(e) => setTitle(e.target.value)}
         />
+        <TitleCharacterLimit>
+          {30 - title.length} characters left
+        </TitleCharacterLimit>
         <CreateNoteTextArea
           cols={12}
           rows={6}
